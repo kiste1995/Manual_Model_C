@@ -1,0 +1,29 @@
+Explanation
+=============
+
+Our zeta bot is equipped with 2 internal motors, an arduino circuit for controlling them
+as well as jackson nano to act as the main brain of the robot. 
+
+When we execute a function from our jupyter notebook, the command is sent to 
+the jackson board which sends the command to an arduino processor mounted on
+our board. This then sends the motors instructions to how to move. 
+
+
+Use use ``rospy`` library to communicate with our robot and send instructions to. 
+By creating a object using the rospy Publisher class, we can send 
+jason strings to the robot. 
+
+
+With our robot now recieving instructions and moving we may also 
+display Odometry infromation. 
+
+Odometry Information
+----------------------
+
+In robotics, estimating the positional information relative to a 
+starting location is called the **odometry**. We may estimate 
+where our robot is relative to its starting position using the 
+feedback information from our motors. 
+
+Odometry information may also help in navigational tasks and other
+self driving applications. 

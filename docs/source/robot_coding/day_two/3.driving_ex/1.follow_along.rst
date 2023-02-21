@@ -1,0 +1,26 @@
+Follow Along!
+================
+
+.. raw:: html
+
+    <div style="background: #C3F8FF" class="admonition note custom">
+        <p style="background: light-blue" class="admonition-title">
+            Follow along: 
+        </p>
+        
+        <div class="line-block">
+            <div class="line"> </div>
+            <div class="line"></div>
+        </div>
+        <ul>
+            <li>
+                
+            </li>
+            <li></li>
+        </ul>
+    </div>
+
+.. raw:: html
+
+    <hr>
+

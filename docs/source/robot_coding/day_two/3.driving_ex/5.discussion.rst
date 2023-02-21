@@ -1,0 +1,24 @@
+Discussion
+=============
+
+We use a Publisher to send commands to the robot command Topic which moves our robot. Although we specify the distance, the robot does not always move correctly. 
+
+.. raw:: html
+
+    <div style="background: #CFFDE1" class="admonition note custom">
+        <p style="background: #68B984" class="admonition-title">
+            Group Discussion Points
+        </p>
+        <ul>
+            <li>
+               
+            </li>
+            <li>
+               
+            </li>
+            <li>
+               
+            </li>
+        </ul>
+        
+    </div>

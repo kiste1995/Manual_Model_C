@@ -1,0 +1,98 @@
+Mission 
+=======================
+
+
+.. raw:: html
+
+    <div style="background: #ffe5b4" class="admonition note custom">
+        <p style="background: #ffbf00" class="admonition-title">
+            Project Name: AlexNet Image Identification System
+        </p>
+        <div class="line-block">
+            <div class="line"><strong>-</strong> This mission is an <strong>individual project</strong></div>
+            <div class="line"><strong>-</strong> Identify the different images stored within the system using the AlexNet Image Identification System.</div>
+            <div class="line"><strong>-</strong> Within your individual computers, execute the following mission. </div>
+        </div>
+    </div>
+
+
+
+.. raw:: html
+
+    <div style="position: relative; color: black; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <h2>Overall Description:</h2>
+    </div>
+
+
+
+Let us try to identify different objects with the AlexNet image idenfitication system. 
+
+For this mission, you will be tasked to see the image identification system work 
+on different pictures. We will work with the with the image identification program
+directly from our jupyter notebook, hence we will not be using our shell programs. 
+
+
+
+Open the alexnet_mission python notebook:
+
+-   02_2-2 alexnet_mission.ipynb
+-   | Running the cell code
+    | `Ctrl + Enter`
+
+.. thumbnail:: /_images/ai_training/alexnet_mission.png
+
+
+
+-   This mission will use python library called ``Image``. This allows us to view images within our jupyter notebook environment. 
+
+    .. code-block:: python
+
+        from IPython.display import Image
+
+-   For our jupyter notebook to run, we must set up correct file paths.
+
+    .. code-block:: python 
+
+        # Evnironment variables
+        %env PROGRAM_PATH=/home/zeta/jetson-inference/build/aarch64/bin
+        %env INPUT_PATH=/home/zeta/jetson-inference/build/aarch64/bin/images
+        %env OUTPUT_PATH=/home/zeta/jetson-inference/build/aarch64/bin/images/test/result_1.jpg
+
+        # Python variables
+        program_path = '/home/zeta/jetson-inference/build/aarch64/bin/'
+        input_path = '/home/zeta/jetson-inference/build/aarch64/bin/images/'
+        output_path = '/home/zeta/jetson-inference/build/aarch64/bin/images/test/result_1.jpg'
+
+
+-   Check all the available images in our system
+
+    .. code-block:: python
+
+        !ls $INPUT_PATH | grep \.jpg$ 
+
+-   Choose one of them and change *CHANGEME* string with the chosen picture name.
+
+    .. code-block:: python 
+
+        # Enter the image file name in image_name variable
+        image_name = 'CHANGEME' #example: orange_0.jpg
+        %env IMG_NAME = $image_name
+
+-   Check if the chosen picture is valid
+
+    .. code-block:: python
+
+        Image(filename=input_path+image_name) 
+
+
+-   Run the program on the specified picture
+
+    .. code-block:: python
+
+        !python3 $PROGRAM_PATH/imagenet.py --network=alexnet $INPUT_PATH/$IMG_NAME $OUTPUT_PATH
+
+-   Display the result
+
+    .. code-block:: python
+
+        Image(filename=output_path) 

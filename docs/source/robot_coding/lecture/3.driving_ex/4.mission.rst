@@ -1,0 +1,68 @@
+Mission Project
+===============================
+
+.. raw:: html
+
+    <div style="background: #ffe5b4" class="admonition note custom">
+        <p style="background: #ffbf00" class="admonition-title">
+            Project Name: Obstacle Avoidance System
+        </p>
+        <div class="line-block">
+            <div class="line"><strong>-</strong> This mission is a <strong>group project</strong></div>
+            <div class="line"><strong>-</strong> Try different combinations of instructions with your team so that the robot successfully avoids the obstacle. </div>
+            <div class="line"><strong>-</strong> It is recommended that the final code be on the Leaders computer. (Simultaneous commands to the robot must be avoided!)</div>
+        </div>
+    </div>
+
+.. raw:: html
+
+    <div style="position: relative; color: black; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <h2>Overall Description:</h2>
+    </div>
+
+For this mission, with the examples discussed earlier, lets try to create a function that contains 
+instructions for the robot to move around an obstacle. 
+
+For this mission you are tasked to create:
+
+- Move and Turn function
+- Main function that would manage the sequence of move functions. 
+
+One thing to keep in mind is that the instructions if not ordered correctly will try to send
+multiple commands to the robot at the same time. In order to avoid that you may try to apply 
+``time.sleep()`` function to wait until the command is complete. 
+
+Example:
+
+.. code-block:: python 
+
+    import rospy
+    import json
+    from std_msgs.msg import UInt8MultiArray, String
+    from nav_msgs.msg import Odometry
+    import time
+    import math
+    import threading
+
+    rospy.init_node('zetabot')
+    move_pub = rospy.Publisher('/robot_command', String, queue_size=1)
+
+    def move():
+        tmp = {"MoveForward": 1}
+        msg = json.dumps(tmp)
+        rospy.loginfo("Sent: %s", msg)
+        move_pub.publish(msg)
+
+    def back():
+        tmp = {"MoveBackward": 1}
+        msg = json.dumps(tmp)
+        rospy.loginfo("Sent: %s", msg)
+        move_pub.publish(msg)
+    
+    def stop():
+        tmp = {"Stop": 0}
+        msg = json.dumps(tmp)
+        rospy.loginfo("Sent: %s", msg)
+        move_pub.publish(msg)
+
+    

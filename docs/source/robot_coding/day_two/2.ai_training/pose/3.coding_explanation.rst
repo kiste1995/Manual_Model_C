@@ -1,0 +1,77 @@
+Coding Explanation
+====================
+
+Major Functionalities
+----------------------
+
+For our Pose Estimation task, we use NVIDIA built python program called the ``posenet.py``.
+The program does 3 major functions:
+
+1.  It manages input streams whether it is an image, a video or a camera.
+2.  It manages network inference on the said input stream.
+3.  It manages output stream along with overlaying results from the model. 
+
+With our python program, the user must specify 
+
+1.  The input stream medium. (whether to input an image, a video or a camera)
+2.  Which model network to use for the inference. 
+3.  The output stream medium. (whether to output an image, a video or a camera)
+
+
+-   Within our ``pose_estimation.ipynb``, we can see that we first initialize the *PATH* for our input and output images.
+    We set up jupyter environment variable with ``env`` as well as python variable.
+
+    .. code-block:: python
+
+        %env DISPLAY=:0
+        %env PROGRAM_PATH=/home/zeta/jetson-inference/build/aarch64/bin
+        %env INPUT_PATH=/home/zeta/jetson-inference/build/aarch64/bin/images
+        %env OUTPUT_PATH=/home/zeta/jetson-inference/build/aarch64/bin/images/test
+
+        input_path='/home/zeta/jetson-inference/build/aarch64/bin/images'
+        output_path='/home/zeta/jetson-inference/build/aarch64/bin/images/test'
+
+    By setting up environment variables, we can call upon these PATH variables, when we wish to run a shell command 
+    within our jupyter notebook. 
+
+-   After choosing and initializing the name of our input images we can see that the ``IMAGE_NAME`` variable is also being 
+    set to be an environment variable. 
+
+-   When we execute our python program (posenet.py), we can see the three parameters the user has set up
+
+    .. code-block:: python
+
+        !python3 $PROGRAM_PATH/posenet.py --network=resnet18-body $INPUT_PATH/$IMAGE_NAME $OUTPUT_PATH/$OUTPUT_NAME
+
+    With ``!python3 $PROGRAM_PATH/posenet.py`` as our activation function, we have:
+    
+    1.  ``--network=resnet18-body``: to specify which network we wished to use. (for this case Pose-ResNet18-Body network)
+    2.  ``$INPUT_PATH/$IMAGE_NAME``: to specify our input image location.
+    3.  ``$OUTPUT_PATH/$OUTPUT_NAME``: to specify our output image location. 
+
+
+-   Jupyter notebook allows us view images within our browser environment. For this we have used IPython library with display module. 
+
+    .. code-block:: python
+
+        from IPython.display import Image
+    
+    -   To view the images simply specify the location of the image. For example, to view the result of our inference:
+
+        .. code-block:: python 
+
+            Image(filename=output_path+'/human_result.jpg') 
+
+
+Minor Functionalities
+----------------------
+
+There are optional flags or parameters you may set up for your ``posenet.py`` program. These parameters may control the width of the line connecting the keypoints
+the size of the keypoints displayed on the screen, how they are connected and so on. 
+
+There are 4 minor functionalities you may edit:
+
+1.  ``--overlay=links,keypoints``: This parameter allows us to choose how we wish to display our detected poses on top of our original input. The input can be comma-seperated combinations of ``box``, ``links``, ``keypoints``, and ``none``.
+2.  ``--keypoint-scale=0.0052``: This parameter controls the radius of the keypoint circle in the overlay.
+3.  ``--link-scale=0.0013``: This parameter controls the width of the link lines in the overlay.
+4.  ``--threshold=0.15``: This parameter sets the minimum threshold for detection. 

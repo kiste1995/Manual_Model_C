@@ -1,0 +1,27 @@
+Discussion
+=============
+
+Both GoogleNet and AlexNet image recognition system can identify an object, but they cannot identify multiple objects.
+
+.. raw:: html
+
+    <div style="background: #CFFDE1" class="admonition note custom">
+        <p style="background: #68B984" class="admonition-title">
+            Group Discussion Points
+        </p>
+        <ul>
+            <li>
+                How can image recognition system be improved so that it can detect multiple objects? What kinds of methods do you think the system would need? There might be:
+                <ul>
+                    <li>Object localization System</li>
+                    <li>Segmentation System</li>
+                    <li>Augmentation System</li>
+                    <li>Object Tracking</li>
+                    <li>etc.,</li>
+                </ul>
+            </li>
+            <li> 
+                Why would we need to detect multiple objects within a screen? Where would this system be implemented?
+            </li>
+        </ul>
+    </div>

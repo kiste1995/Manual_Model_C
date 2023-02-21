@@ -1,0 +1,72 @@
+ROS Topic Publisher
+======================
+
+.. raw:: html
+    
+    <div style="background: #C3F8FF" class="admonition note custom">
+        <p style="background: light-blue" class="admonition-title">
+            Follow along: ROS Topic Publisher Example
+        </p>
+        <div class="line-block">
+            <div class="line">The program launching process along with parameter settings are all simplified and set up on the Jupyter Notebook Environment.</div>
+        </div>
+        <ul>
+            <li>Open the 01_01_ros_topic_publisher.ipynb Jupyter Notebook</li>
+            <li>Import the necessary python libraries and modules</li>
+            <li>Follow and Execute the example codes</li>
+
+        </ul>
+        <div class="line">(The Jetson Board used for these examples are => Jetson Nano)</div>
+        
+    </div>
+
+
+.. raw:: html
+
+    <hr>
+
+Open the following jupyter notebook:
+
+- 03_01_ros_topic_publisher.ipynb
+- To run the cells within the notebook use *Ctrl + Enter*
+
+
+.. thumbnail:: /_images/content_control/comm1.jpg
+
+|
+
+Import the necessary python libraries and modules
+
+.. code-block:: python
+
+    import rospy
+    from std_msgs.msg import String
+    
+- Create `talker()` function
+- Within the talker function:
+
+    - Create talker nodes and chatter topics
+    - Publish "hello world" + ROS Timestamp Message repeatedly (per 10hz)
+
+.. code-block:: python
+
+    def talker():
+        pub = rospy.Publisher('chatter', String, queue_size=10)
+        rospy.init_node('talker', anonymous=True)
+        rate = rospy.Rate(10) # 10hz
+        while not rospy.is_shutdown():
+            hello_str = "hello world %s" % rospy.get_time()
+            rospy.loginfo(hello_str)
+            pub.publish(hello_str)
+            rate.sleep()
+
+
+- Execute the talker() function with handler functions. 
+
+.. code-block:: python
+
+    try:
+        talker()
+    except rospy.ROSInterruptException:
+        pass
+

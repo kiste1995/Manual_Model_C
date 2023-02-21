@@ -1,0 +1,93 @@
+Follow Along!
+==============
+
+.. raw:: html
+
+    <div style="background: #C3F8FF" class="admonition note custom">
+        <p style="background: light-blue" class="admonition-title">
+            Follow along: GoogleNet Example
+        </p>
+        <div class="line-block">
+            <div class="line">The program launching process along with parameter settings are all simplified and set up on the Jupyter Notebook Environment.</div>
+        </div>
+        <ul>
+            <li>Open the googlenet.ipynb jupyter notebook</li>
+            <li>Import the necessary libraries</li>
+            <li>With the input picture, execute the image recognition</li>
+            <li>Terminate the task upon its completion</li>
+        </ul>
+        <div class="line">(The Jetson Board used for these examples are => Jetson Nano)</div>
+    </div>
+
+.. raw:: html
+
+    <hr>
+
+
+-   02_1-1. Detect oranges in images - googlenet.ipynb
+-   | Running the cell code
+    | `Ctrl + Enter`
+
+.. thumbnail:: /_images/ai_training/googlenet1.png
+
+
+-   Import the subprocess module to run the example scripts (i.e. show.sh, kill.sh)
+
+.. code-block:: python
+
+    import subprocess
+
+
+
+-   Check the input image
+
+    .. code-block:: python
+
+        # Check the original image
+        run_command_before = 'bash ~/ai_example/show.sh orange before'
+        subprocess.call((run_command_before.split('\n')), shell=True)
+
+
+    .. thumbnail:: /_images/ai_training/googlenet2.png
+
+|
+
+-   After confirming that the Input image is correct, terminate the image window
+
+    .. code-block:: python
+
+        # terminating the process
+        kill_command_before = 'bash ~/ai_example/kill.sh display'
+        subprocess.call((kill_command_before.split('\n')), shell=True)
+
+
+-   Guess what the image is!
+
+    .. code-block:: python
+
+        # Detect objects
+        detect_command_orange = 'bash ~/ai_example/detect.sh orange_googlenet'
+        subprocess.call((detect_command_orange.split('\n')), shell=True)
+
+-   Output the result on the image window
+
+    .. code-block:: python
+
+        # Check the detected image
+        run_command_after = 'bash ~/ai_example/show.sh orange after googlenet'
+        subprocess.call((run_command_after.split('\n')), shell=True)
+
+
+
+    .. thumbnail:: /_images/ai_training/googlenet3.png
+
+|
+
+-   Terminate the process
+
+
+    .. code-block:: python
+
+        # terminating the process
+        kill_command_after = 'bash ~/ai_example/kill.sh display'
+        subprocess.call((kill_command_after.split('\n')), shell=True)

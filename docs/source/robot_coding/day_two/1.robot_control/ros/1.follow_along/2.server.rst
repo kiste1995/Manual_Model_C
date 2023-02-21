@@ -1,0 +1,90 @@
+.. _Server ROS:
+
+ROS Service Server
+====================
+
+The Follow Along Examples:
+
+- :ref:`Command ROS`
+- :ref:`Server ROS` <- you are here 
+- :ref:`Client ROS`
+
+.. raw:: html
+    
+    <div style="background: #C3F8FF" class="admonition note custom">
+        <p style="background: light-blue" class="admonition-title">
+            Follow along: ROS Service Server Example
+        </p>
+        <div class="line-block">
+            <div class="line">The program launching process along with parameter settings are all simplified and set up on the Jupyter Notebook Environment.</div>
+        </div>
+        <ul>
+            <li>Open the 02_02_ros_service_client.ipynb Jupyter Notebook</li>
+            <li>Import the necessary python libraries and modules</li>
+            <li>Follow and Execute the example codes</li>
+
+        </ul>
+        <div class="line">(The Jetson Board used for these examples are => Jetson Nano)</div>
+        
+    </div>
+
+
+.. raw:: html
+
+    <hr>
+
+Open the following jupyter notebook:
+
+-   02_02_ros_service_client.ipynb
+-   To run the cells within the notebook use *Ctrl + Enter*
+
+.. thumbnail:: /_images/content_control/comm12.png
+
+.. thumbnail:: /_images/content_control/comm13.png
+
+
+-   Import print_function from __future__ module for Python3 compatibility
+-   Import sys module
+-   Import rospy_tutorials.srv module
+-   Import rospy modules
+
+.. code-block:: python
+
+    from __future__ import print_function
+    import sys
+    import rospy
+    from rospy_tutorials.srv import *
+    
+
+-   Create add_two_ints_client()  function
+-   Create add_two_ints_client() 
+-   Get add_two_ints Service result
+-   exception handling
+
+
+.. code-block:: python
+
+    def add_two_ints_client(x, y):
+        rospy.wait_for_service('add_two_ints')
+        try:
+            add_two_ints = rospy.ServiceProxy('add_two_ints', AddTwoInts)
+            resp1 = add_two_ints(x, y)
+            return resp1.sum
+        except rospy.ServiceException as e:
+            print("Service call failed: %s"%e)
+
+-   Get user input x, y, and output the calculation result:
+
+.. code-block:: python
+
+    def usage():
+        return "%s [x y]"%sys.argv[0]
+
+.. code-block:: python
+
+    input_num = input("숫자 두 개를 입력하세요(ex: a,b) : ")
+    x = int(input_num[0])
+    y = int(input_num[1])
+    print("Requesting %s+%s"%(x, y))
+    print("%s + %s = %s"%(x, y, add_two_ints_client(x, y)))
+

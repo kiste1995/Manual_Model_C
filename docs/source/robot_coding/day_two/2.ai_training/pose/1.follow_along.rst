@@ -1,0 +1,95 @@
+Follow Along!
+==============
+
+.. raw:: html
+
+    <div style="background: #C3F8FF" class="admonition note custom">
+        <p style="background: light-blue" class="admonition-title">
+            Follow along: Pose Estimation Example
+        </p>
+        <div class="line-block">
+            <div class="line">The program launching process along with parameter settings are all simplified and set up on the Jupyter Notebook Environment.</div>
+        </div>
+        <ul>
+            <li>Open the pose_estimation.ipynb jupyter notebook</li>
+            <li>Initialize your output stream, and your path, and import in the Image library</li>
+            <li>Check all the available human pictures within the system</li>
+            <li>Pick one of the image with human(s) and initialize the image/ output name. </li>
+            <li>Execute Pose Estimation on the chosen picture </li>
+            <li>Display the result</li>
+        </ul>
+        <div class="line">(The Jetson Board used for these examples are => Jetson Nano)</div>
+    </div>
+
+.. raw:: html
+
+    <hr>
+
+
+-   02_4-1. pose_estimation.ipynb
+-   | Running the cell code
+    | `Ctrl + Enter`
+
+.. thumbnail:: /_images/ai_training/pose_estimation.png
+
+
+-   Initialize your output stream, and your path, and import in the Image library
+
+.. code-block:: python
+
+    from IPython.display import Image
+
+    %env DISPLAY=:0
+    %env PROGRAM_PATH=/home/zeta/jetson-inference/build/aarch64/bin
+    %env INPUT_PATH=/home/zeta/jetson-inference/build/aarch64/bin/images
+    %env OUTPUT_PATH=/home/zeta/jetson-inference/build/aarch64/bin/images/test
+
+    input_path='/home/zeta/jetson-inference/build/aarch64/bin/images'
+    output_path='/home/zeta/jetson-inference/build/aarch64/bin/images/test'
+
+
+
+-   Check all the available human pictures within the system
+
+    .. code-block:: python
+
+        !ls $INPUT_PATH/humans_*
+
+
+    .. thumbnail:: /_images/ai_training/pose_1.png
+
+|
+
+-   Pick one of the image with human(s) and initialize the image/ output name. 
+
+    .. code-block:: python
+
+        image_name = 'ChangeMe'
+        output_name = 'human_result.jpg'
+        %env IMAGE_NAME = $image_name
+        %env OUTPUT_NAME = $output_name
+
+        Image(filename=input_path+'/'+image_name) 
+
+
+-   Guess the pose!
+
+    .. code-block:: python
+
+        %%capture
+        !python3 $PROGRAM_PATH/posenet.py --network=resnet18-body $INPUT_PATH/$IMAGE_NAME $OUTPUT_PATH/$OUTPUT_NAME
+
+
+
+
+|
+
+-   Show the resulting image
+
+
+    .. code-block:: python
+
+        Image(filename=output_path+'/human_result.jpg') 
+
+
+    .. thumbnail:: /_images/ai_training/pose_result.jpg

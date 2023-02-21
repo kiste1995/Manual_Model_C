@@ -1,0 +1,203 @@
+Warehouse Navigation
+======================
+
+
+Warehouse Navigation example is an example provided by Nvidia that simulates Robot navigation in a factory environment. 
+
+.. raw:: html
+
+    <div style="background: #ffe5b4" class="admonition note custom">
+        <p style="background: #ffbf00" class="admonition-title">
+            Project Name: WareHouse Navigation Example
+        </p>
+        <ol>
+            <li>Prerequisite </li>
+            <li>
+                The ROS Navigation Setup  
+                <ul>
+                    <li>Carter_ROS OmniGraph nodes</li>
+                    <li>Generate Occupancy Map</li>
+                </ul>
+            </li>
+            <li>Running ROS Navigation</li>
+
+        </ol>
+    </div>
+
+
+
+
+Prerequisite
+---------------
+
+- For this example we will be using ROS navigation stack which can be installed in the following way.
+  
+  .. code-block:: bash
+
+    sudo apt-get install ros-$ROS_DISTRO-navigation
+
+- We have already downloaded and prepared necessary ROS packages which are all located in: ``/home/zetabank/dev_ws/src/navigation``
+
+    1. ``carter_2dnav``
+    2. ``carter_description``
+    3. ``isaac_ros_navigation_goal``
+
+- Make sure roscore is operational before omniverse Isaac Sim is on. 
+
+
+The ROS Navigation Setup
+-------------------------------
+
+Carter_ROS OmniGraph Nodes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In order to load the WareHouse simulation:
+
+1. Go to `Isaac Examples` at the top of the screen
+2. Select `ROS` within isaac examples
+3. Select `Navigation` within ROS 
+
+This step will load in the warehouse scenario. 
+
+To ensure that the loading was successful, check the Action Graph and ROS_Camera of Carter_ROS.
+
+1. From Stage, select Carter_ROS and select ActionGraph. Press ``Open Graph`` to see the Action Graph. Modify and setup the following nodes:
+   
+   .. list-table::
+      :header-rows: 1
+
+      * - Omnigraph Node
+        - Function
+      * - ros1_subscribe_twist
+        - Subscribes to the /cmd_vel topic and triggers the differential and articulation controllers to the move the robot
+      * - ros1_publish_odometry
+        - Publishes odometry received from the ``isaac_compute_odometry_node``
+      * - ros1_publish_raw_transform_tree192.168.0.163:/home/zetabank/Pictures/rviz_2D_goal.png
+        - Publishes the transform between the odom frame and base_link frame
+      * - ros1_publish_transform_tree
+        - Publishes the static transform between the base_link frame and chassis_link frame. Keep in mind that since the target prim is set as ``Carter_ROS``, the entire transform tree of the Carter robot (with chassis_link as root) will be published as children of the base_link frame
+      * - ros1_publish_transform_tree_01
+        - Publishes the static transform between the chassis_link frame and carter_lidar frame
+      * - ros1_publish_laser_scan
+        - Publishes the 2D LaserScan received from the ``isaac_read_lidar_beams_node``
+
+2. From Stage, select Carter_ROS and select ROS_Camera. Press ``Open Graph`` to see the ROS Camera Graph. Modify and setup the following nodes:
+   
+   .. list-table::
+      :header-rows: 1
+
+      * - Omnigraph Node
+        - Function
+      * - ros1_create_camera_left_info
+        - Auto-generates the CameraInfo publisher for the /camera_info_left topic. It automatically publishes since the ``enable_camera_left`` branch node is enabled by default
+      * - ros1_create_camera_left_rgb
+        - Auto-generates the RGB Image publisher for the /rgb_left topic. It automatically publishes since the ``enable_camera_left`` and ``enable_camera_left_rgb`` branch nodes are enabled by default
+      * - ros1_create_camera_left_depth
+        - Auto-generates the Depth (32FC1) Image publisher for the /depth_left topic. To start publishing, ensure ``enable_camera_left`` and ``enable_camera_left_depth`` branch nodes are enabled
+      * - ros1_create_camera_right_info
+        - Auto-generates the CameraInfo publisher for the /camera_info_right topic. To start publishing, ensure the ``enable_camera_right`` branch node is enabled
+      * - ros1_create_camera_right_rgb
+        - Auto-generates the RGB Image publisher for the /rgb_right topic. To start publishing, ensure ``enable_camera_right`` is enabled. The ``enable_camera_right_rgb`` branch node is already enabled by default
+      * - ros1_create_camera_right_depth
+        - Auto-generates the Depth (32FC1) Image publisher for the /depth_right topic. To start publishing, ensure ``enable_camera_right`` and ``enable_camera_right_depth`` branch nodes are enabled
+
+3. Make sure that the ROS_Clock Contains ros1_publish_clock node responsbile for piblishing the simulation time to the / clock topic. 
+
+Generate Occupancy Map
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. On the upper left corner of the viewport, click on Camera, and select the Top from dropdown menu:
+   
+   .. thumbnail:: /_images/ai_training/top.png
+
+   |
+
+   With the ``Top`` view angle, the workspace will look similar to a blue print of the warehouse:
+
+   .. thumbnail:: /_images/ai_training/top_view.png
+   
+   |
+
+2. Open up the occupance map: *Isaac Utils* -> *Occupancy Map*. Upon opening, the occupancy map window will appear. 
+
+   - Set all the parameters of **Origin** to (``X:0.0, Y:0.0, Z:0.0``).
+   - Set ``Z:0.1`` for the **Lower Bound**.
+   - Set ``Z:0.62`` for the **Upper Bound**. The distance is set to match the vertical distance of the lidar onboard Carter with respect to the ground. 
+
+3. Select the *warehouse_with_forklifts* prim in the stage window:
+   
+   .. thumbnail:: /_images/ai_training/warehourse_prim.png
+
+   |
+
+   Click ``BOUND SELECTION``:
+
+   .. thumbnail:: /_images/ai_training/warehouse_select.png
+   
+   |
+
+4. Remove the ``Carter_ROS`` from the stage.
+5. Once the ``Carter_ROS`` is removed, click on ``CALCULATE`` followed by ``VISUALIZE IMAGE``. This will promt visualization window. 
+   
+   .. thumbnail:: /_images/ai_training/visual.png
+
+   |
+
+6. Within the Visualize window, rotate the image 180 degrees and select *Coordinate Type* as ``ROS Occupancy Map Parameters File (YAML)``. With these settings click ``RE-GENERATE IMAGE``.
+   
+   This was done to align the ROS camera with the Isaac Sim camera, since within the simulation, their alignment is different. 
+
+7. After this, the YAML text will appear. Copy this text and stored it as a ``carter_warehouse_navigation.yaml``. Example:
+   
+   .. code-block:: yaml 
+
+    image: carter_warehouse_navigation.png
+    resolution: 0.05
+    origin: [-11.975, -17.975, 0.0000]
+    negate: 0
+    occupied_thresh: 0.65
+    free_thresh: 0.196
+
+8. Place the ``carter_warehouse_navigation.yaml`` file in our project map directory. It is located in ``/home/zetabank/dev_ws/src/navigation/carter_2dnav/map``.
+
+   - Open a new Terminal. (*ctrl+alt+t*)
+   - Type ``cd /home/zetabank/dev_ws/src/navigation/carter_2dnav/map``.
+   - Type ``vi carter_warehouse_navigation.yaml``
+   - Copy and paste the yaml text.
+   - Press ``Esc`` to escape the edit, and press ``:`` and ``wq`` to save the file. 
+
+9. Save the image as ``carter_warehouse_navigation.png`` and put it in the same map directory. 
+    
+   .. thumbnail:: /_images/ai_training/carter_warehouse_navigation.png
+
+
+
+Running ROS Navigation
+------------------------
+
+- Close the previous Isaac Sim window without saving, and open up a new Isaac Sim.
+- Go to *Isaac Examples -> ROS -> Navigation* to load warehouse_example.
+- Click Play to start the simulation.
+- Open a new terminal and type in 
+  
+  .. code-block:: bash
+
+    roslaunch carter_2dnav carter_navigation.launch
+
+- This will start RViz where the urdf model of the robot and the global occupancy map as well as the local costmap which will all my overlaid on top will load. 
+  
+  .. thumbnail:: /_images/ai_training/rviz.png
+
+  |
+
+- To double check if all the tranforms are broadcasting, exectue ``rosrun rqt_tf_tree rqt_tf_tree`` to generate ROS TF frame tree:
+  
+  .. thumbnail:: /_images/ai_training/isaac_sample_ros_nav_4.png
+
+  |
+
+- The position of the robot is predefined in carter_navigation.launch. You can manually set the position of the robot in relation to the map, you may do so with 2D Pose Estimate. 
+- Click on ``2D Nav Goal`` and click the desired location and drag the curser to set which direction the robot should face once it reaches the said location. 
+
+  .. thumbnail:: /_images/ai_training/rviz_2D_goal.png
+

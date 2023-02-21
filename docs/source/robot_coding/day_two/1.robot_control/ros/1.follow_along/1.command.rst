@@ -1,0 +1,107 @@
+.. _Command ROS:
+
+ROS Command Example
+======================
+
+
+The Follow Along Examples:
+
+- :ref:`Command ROS` <- you are here
+- :ref:`Server ROS` 
+- :ref:`Client ROS`
+
+
+
+.. raw:: html
+    
+    <div style="background: #C3F8FF" class="admonition note custom">
+        <p style="background: light-blue" class="admonition-title">
+            Follow along: ROS Command Example
+        </p>
+        <div class="line-block">
+            <div class="line">The program launching process along with parameter settings are all simplified and set up on the Jupyter Notebook Environment.</div>
+        </div>
+        <ul>
+            <li>Open the 01_ros.ipynb Jupyter Notebook</li>
+            <li>Import the necessary python libraries and modules</li>
+            <li>Follow and Execute the example codes</li>
+
+        </ul>
+        <div class="line">(The Jetson Board used for these examples are => Jetson Nano)</div>
+        
+    </div>
+
+
+.. raw:: html
+
+    <hr>
+
+Open the following jupyter notebook:
+
+-   01_ros.ipynbipynb
+-   To run the cells within the notebook use *Ctrl + Enter*
+
+
+
+-   Run the first cell to output a list of currently running ROS Nodes
+
+.. code-block:: bash
+
+    $ !rosnode list
+
+.. thumbnail:: /_images/content_control/comm3.png
+
+
+-   Outputs joy_node Print Node information
+
+.. code-block:: bash
+
+    $ !rosnode info /joy_node
+
+.. thumbnail:: /_images/content_control/comm4.webp
+
+
+-   Prints a list of currently running ROS topics
+
+.. code-block:: bash
+
+    $ !rostopic list
+
+.. thumbnail:: /_images/content_control/comm5.png
+
+
+-   Output information of imu Topic
+
+.. code-block:: bash
+
+    $ !rostopic info /imu
+
+.. thumbnail:: /_images/content_control/comm6.png
+
+
+-   Print imu Topic Message
+
+.. code-block:: bash
+
+    $ !rostopic echo /imu
+
+.. thumbnail:: /_images/content_control/comm7.png
+
+
+-   Check process list using pm2
+
+.. code-block:: bash
+
+    $ pm2 list
+
+.. thumbnail:: /_images/content_control/comm8.webp
+
+
+-   Output information of zetasound Node
+
+.. code-block:: bash
+
+    $ !rosnode info /zetasound
+
+.. thumbnail:: /_images/content_control/comm9.png
+

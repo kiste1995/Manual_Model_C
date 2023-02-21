@@ -1,0 +1,140 @@
+====================================
+Tracking a Face with the Robotic Arm
+====================================
+
+.. raw:: html
+    
+    <div style="background: #C3F8FF" class="admonition note custom">
+        <p style="background: light-blue" class="admonition-title">
+            Follow along: Tracking a Face with the Robotic Arm
+        </p>
+        <div class="line-block">
+            <div class="line">The program launching process along with parameter settings are all simplified and set up on the Jupyter Notebook Environment.</div>
+        </div>
+        <ul>
+            <li>Open the 05_07_face_follow.ipynb Jupyter Notebook</li>
+            <li>Load Arm_Lib module and register the robot arm as an object</li>
+            <li>Create the instance and initialize the parameters</li>
+            <li>Creating controls</li>
+            <li>Switch mode</li>
+            <li>Execute the Code</li>
+
+        </ul>
+        <div class="line">(The Jetson Board used for these examples are => Jetson Nano)</div>
+        
+    </div>
+
+
+.. raw:: html
+
+    <hr>
+
+-   05_07_face_follow
+-   | Running the cell code
+    | `Ctrl + Enter`
+
+.. thumbnail:: /_images/having_fun/face1.png
+
+-   To make sure that no other program is using the robot arm, turn off the joy stick control and allow for robot arm to be controlled:
+
+.. code-block:: python 
+
+    %%capture
+    !pm2 stop 14
+    !pm2 start 15
+
+-   Face Recognition and Tracking Using Robot Arm Camera
+-   Import head file
+
+.. code-block:: python
+
+    import cv2 as cv
+    import threading
+    from time import sleep
+    import ipywidgets as widgets
+    from IPython.display import display
+    from face_follow import face_follow
+
+-   Initialize DOFBOT position
+
+
+.. code-block:: python
+
+    import Arm_Lib
+    Arm = Arm_Lib.Arm_Device()
+    joints_0 = [90, 150, 20, 20, 90, 30]
+    Arm.Arm_serial_servo_write6_array(joints_0, 1500)
+
+-   Create the instance and initialize the parameters
+
+.. code-block:: python
+
+    follow = face_follow()
+
+    model = 'General'
+
+-   Creating controls
+
+.. code-block:: python
+
+    button_layout = widgets.Layout(width='250px', height='50px', align_self='center')
+    output = widgets.Output()
+
+    exit_button = widgets.Button(description='Exit', button_style='danger', layout=button_layout)
+
+    imgbox = widgets.Image(format='jpg', height=480, width=640, layout=widgets.Layout(align_self='center'))
+
+    controls_box = widgets.VBox([imgbox, exit_button], layout=widgets.Layout(align_self='center'))
+    # ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch', 'inherit', 'initial', 'unset']
+
+
+-   Controls
+
+.. code-block:: python
+
+    def exit_button_Callback(value):
+        global model
+        model = 'Exit'
+    #     with output: print(model)
+    exit_button.on_click(exit_button_Callback)
+
+-   Main Process
+
+.. code-block:: python
+
+    def camera():
+        global model
+        # Open camera
+        capture = cv.VideoCapture(1)
+        # Be executed in loop when the camera is opened normally 
+        while capture.isOpened():
+            try:
+
+                _, img = capture.read()
+
+                img = cv.resize(img, (640, 480))
+                img = follow.follow_function(img)
+                if model == 'Exit':
+                    cv.destroyAllWindows()
+                    capture.release()
+                    break
+                imgbox.value = cv.imencode('.jpg', img)[1].tobytes()
+            except KeyboardInterrupt:capture.release()
+
+
+-   Start
+
+
+.. code-block:: python
+
+    display(controls_box,output)
+    threading.Thread(target=camera, ).start()
+
+
+-   Reset the Robot Arm control
+
+.. code-block:: python 
+
+    %%capture
+    !pm2 stop 15
+    !pm2 start 14

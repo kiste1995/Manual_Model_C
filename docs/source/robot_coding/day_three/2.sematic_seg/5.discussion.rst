@@ -1,0 +1,24 @@
+Discussion
+=============
+
+The Segmentation system allows us to differentiate the environment. through our examples we were able to see how the system can be applied to variety of different applications.  
+
+.. raw:: html
+
+    <div style="background: #CFFDE1" class="admonition note custom">
+        <p style="background: #68B984" class="admonition-title">
+            Group Discussion Points
+        </p> 
+        <ul>
+            <li> 
+                If you could create your own segmentation system, where would it be used?
+            </li>
+            <li>
+                How would you make your segmentation model? 
+                <ul>
+                    <li> When creating a machine learning model, we need a model architecture and a data to train the said architecture. Depending on the application, we may import premade segmentation model architecture, but we need to collect our own data for our specific task. For example for MRI scans, we need to have a segmentation model that would differentiate diseased portion from the healthy patch. To do this, we need multiple MRI scans that are labeled by professional to train our model.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+

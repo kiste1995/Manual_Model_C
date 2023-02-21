@@ -1,0 +1,284 @@
+Follow Along!
+==============
+
+
+.. raw:: html
+
+    <div style="background: #C3F8FF" class="admonition note custom">
+        <p style="background: light-blue" class="admonition-title">
+            Follow along: Segmentation Examples
+        </p>
+        <div class="line-block">
+            <div class="line">The program launching process along with parameter settings are all simplified and set up on the Jupyter Notebook Environment.</div>
+            <div class="line">The segmentation task is able to operate with various input pictures. Here are the examples:</div>
+        </div>
+        <ul>
+            <li>City Scapes</li>
+            <li>Outdoor (off-road)</li>
+            <li>Segmenting Human Images</li>
+            <li>Variaty Objects and People</li>
+            <li>In-Doors</li>
+        </ul>
+        <div class="line">(The Jetson Board used for these examples are => Jetson Nano)</div>
+    </div>
+
+.. raw:: html
+
+    <hr>
+
+-   02_5-1. segmentation.ipynb
+-   | Running the cell code
+    | `Ctrl + Enter`
+
+.. thumbnail:: /_images/ai_training/segmentation.png
+
+
+-   Initialize your output stream, and your path, and import in the Image library
+
+.. code-block:: python
+
+    from IPython.display import Image
+
+    %env DISPLAY=:0
+    %env PROGRAM_PATH=/home/zeta/jetson-inference/build/aarch64/bin
+    %env INPUT_PATH=/home/zeta/jetson-inference/build/aarch64/bin/images
+    %env OUTPUT_PATH=/home/zeta/jetson-inference/build/aarch64/bin/images/test
+
+    input_path='/home/zeta/jetson-inference/build/aarch64/bin/images'
+    output_path='/home/zeta/jetson-inference/build/aarch64/bin/images/test'
+
+
+CityScapes
+-----------
+
+-   Check all the available pictures within the system
+
+    .. code-block:: python
+
+        !ls $INPUT_PATH/city_*
+
+
+-   Pick one of the images with urban city scene and initialize the image/ output name. 
+
+    .. code-block:: python
+
+        image_name = 'ChangeMe'
+        output_name = 'city_result.jpg'
+        %env IMAGE_NAME = $image_name
+        %env OUTPUT_NAME = $output_name
+
+        Image(filename=input_path+'/'+image_name) 
+
+
+    .. thumbnail:: /_images/ai_training/city.jpg
+
+|
+
+-   Segment the picture
+
+    .. code-block:: python
+
+        %%capture
+        !python3 $PROGRAM_PATH/segnet.py --network=fcn-resnet18-cityscapes $INPUT_PATH/$IMAGE_NAME $OUTPUT_PATH/$OUTPUT_NAME
+
+
+
+|
+
+-   Show the resulting image
+
+
+    .. code-block:: python
+
+        Image(filename=output_path+'/city_result.jpg') 
+
+
+    .. thumbnail:: /_images/ai_training/city_seg.jpg
+
+Outdoor (off-road)
+-------------------
+
+-   Check all the available pictures within the system
+
+    .. code-block:: python
+
+        !ls $INPUT_PATH/trail_*
+
+
+-   Pick one of the images with outdoor scenes and initialize the image/ output name. 
+
+    .. code-block:: python
+
+        image_name = 'ChangeMe'
+        output_name = 'trail_result.jpg'
+        %env IMAGE_NAME = $image_name
+        %env OUTPUT_NAME = $output_name
+
+        Image(filename=input_path+'/'+image_name) 
+
+
+    .. thumbnail:: /_images/ai_training/outdoor.jpg
+
+|
+
+-   Segment the picture
+
+    .. code-block:: python
+
+        %%capture
+        !python3 $PROGRAM_PATH/segnet.py --network=fcn-resnet18-deepscene $INPUT_PATH/$IMAGE_NAME $OUTPUT_PATH/$OUTPUT_NAME
+
+
+|
+
+-   Show the resulting image
+
+
+    .. code-block:: python
+
+        Image(filename=output_path+'/trail_result.jpg') 
+
+
+    .. thumbnail:: /_images/ai_training/outdoor_seg.jpg
+
+
+Segmenting Human Images
+-------------------------
+
+-   Check all the available human pictures within the system
+
+    .. code-block:: python
+
+        !ls $INPUT_PATH/humans_*
+
+
+
+-   Pick one of the images with people and initialize the image/ output name. 
+
+    .. code-block:: python
+
+        image_name = 'ChangeMe'
+        output_name = 'humans_seg_result.jpg'
+        %env IMAGE_NAME = $image_name
+        %env OUTPUT_NAME = $output_name
+
+        Image(filename=input_path+'/'+image_name) 
+
+    .. thumbnail:: /_images/ai_training/people.jpg
+
+|
+
+-   Segment the picture
+
+    .. code-block:: python
+
+        %%capture
+        !python3 $PROGRAM_PATH/segnet.py --network=fcn-resnet18-mhp $INPUT_PATH/$IMAGE_NAME $OUTPUT_PATH/$OUTPUT_NAME
+
+
+
+|
+
+-   Show the resulting image
+
+
+    .. code-block:: python
+
+        Image(filename=output_path+'/humans_seg_result.jpg') 
+
+
+    .. thumbnail:: /_images/ai_training/people_seg.jpg
+
+
+Variaty Objects and People
+----------------------------
+
+-   Check all the available pictures within the system
+
+    .. code-block:: python
+
+        !ls $INPUT_PATH/object_*
+
+
+-   Pick one of the images with variaty of objects and people and initialize the image/ output name. 
+
+    .. code-block:: python
+
+        image_name = 'ChangeMe'
+        output_name = 'object_result.jpg'
+        %env IMAGE_NAME = $image_name
+        %env OUTPUT_NAME = $output_name
+
+        Image(filename=input_path+'/'+image_name) 
+
+
+    .. thumbnail:: /_images/ai_training/object.jpg
+
+|
+
+-   Segment the picture
+
+    .. code-block:: python
+
+        %%capture
+        !python3 $PROGRAM_PATH/segnet.py --network=fcn-resnet18-voc $INPUT_PATH/$IMAGE_NAME $OUTPUT_PATH/$OUTPUT_NAME
+
+
+
+|
+
+-   Show the resulting image
+
+
+    .. code-block:: python
+
+        Image(filename=output_path+'/object_result.jpg') 
+
+
+    .. thumbnail:: /_images/ai_training/object_seg.jpg
+
+
+In-Doors
+-----------
+
+-   Check all the available pictures within the system
+
+    .. code-block:: python
+
+        !ls $INPUT_PATH/room_*
+
+
+-   Pick one of the images with urban city scene and initialize the image/ output name. 
+
+    .. code-block:: python
+
+        image_name = 'ChangeMe'
+        output_name = 'room_result.jpg'
+        %env IMAGE_NAME = $image_name
+        %env OUTPUT_NAME = $output_name
+
+        Image(filename=input_path+'/'+image_name) 
+ 
+    .. thumbnail:: /_images/ai_training/indoor.jpg
+
+|
+
+-   Segment the picture
+
+    .. code-block:: python
+
+        %%capture
+        !python3 $PROGRAM_PATH/segnet.py --network=fcn-resnet18-sun $INPUT_PATH/$IMAGE_NAME $OUTPUT_PATH/$OUTPUT_NAME
+
+
+|
+
+-   Show the resulting image
+
+
+    .. code-block:: python
+
+        Image(filename=output_path+'/room_result.jpg') 
+
+
+    .. thumbnail:: /_images/ai_training/indoor_seg.jpg

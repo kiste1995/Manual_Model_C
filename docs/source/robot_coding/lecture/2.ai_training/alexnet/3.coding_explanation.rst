@@ -1,0 +1,39 @@
+Coding Explanation
+====================
+
+Within our Jupyter Notebook we use python library called ``subprocess``
+
+Python code allows us to import many libraries into our code. The libraries are
+bundles of pre written python modules, with many functions with different roles. 
+
+This Library ``subprocess`` allows us to spawn new command line processes, send input informations to
+them and recieve output results or errors.
+
+For example, when we wish to open our original image:
+
+1. We define the location of our program (for this case show.sh).
+2. We use the ``call`` function from subprocess library.
+
+.. code-block:: python
+
+    # Check the original image
+    run_command_before = 'bash ~/ai_example/show.sh orange before' #1st
+    subprocess.call((run_command_before.split('\n')), shell=True)  #2nd
+
+The ``call`` function allows us to execute our *command* in command line interface and recieve
+the returncode from the said *command*. We can force the cell to create a new shell window by 
+turning the shell option within call function *True*.
+
+Our command is a shell script which is a file that contains pre-written shell commands 
+inside them. 
+
+We have total of 3 shell programs:
+
+1. show.sh
+2. detect.sh
+3. kill.sh
+
+* show.sh program would create a new display to show either the input image or the input video.
+* detect.sh program would run inference on an input image(s), video(s) or a camera feed. 
+* kill.sh program would kill the created display, and the camera feed (if it ever was created)
+

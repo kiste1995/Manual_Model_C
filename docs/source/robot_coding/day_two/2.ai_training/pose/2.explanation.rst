@@ -1,0 +1,53 @@
+Overall Explanation
+====================
+
+Overview
+---------
+
+Pose estimation is a method of determining different human poses from an image, a video or a camera.
+This is achieved by having our major joints such as shoulder, elbow and hip as a main keypoints. When 
+Those keypoints are connected, we can get a simple stick figure of a human (skeletal topology), which is much easier 
+to compute and process.  
+
+For our usecase, the pre-trained model contains 18 keypoints to make out human pose. 
+
+Perceiving human poses in this simple manner allows computers to recognize different postures and gestures that people make.
+Diffult tasks such as human/ machine interfaces can become much more advanced with a good pose estimation
+machine.  
+
+
+
+Pose-ResNet18-Body
+--------------------
+
+
+Pose-ResNet18-Body is a pre-trained model that is based on the ResNet architecture.
+
+The ResNet architecture is a deep neural network that is based on Convolutional Neural Networks. 
+One of the best feature of deep neural networks are their ability to have multiple neural layers. Since stacking may improve
+the accuracy of the model drastically. But the problem that most deep layers is **vanishing gradient** problem. 
+
+As we add more and more layer, the gradients that must travel from the loss function during back-propagation shrunks to 
+nearly zero due to chain-rule resulting in almost no training to be done. 
+
+The ResNet architecture resolves this issue with a concepts called the Residual Blocks. 
+
+
+Residual Blocks
+^^^^^^^^^^^^^^^
+
+.. thumbnail:: /_images/ai_training/residual_block.png
+
+|
+
+With the normal architecture, the activation function multiplies the input *x* with the weights and adds the bias terms. 
+But as we can see in the figure, the residual blocks retain the input *x* and adds it onto the activation function. 
+This process is called the skip connections. 
+
+With these skip connections the ResNet architecture solves the problem of vanishing gradient in deep CNN for allowing alternate 
+shortcut path for the gradient to flow through. 
+
+For our application, we use ResNet18 model, which is the ResNet architecture with 18 CNN layers with residual blocks. 
+
+
+*reference* : `<https://www.analyticsvidhya.com/blog/2021/06/build-resnet-from-scratch-with-python/>`_

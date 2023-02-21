@@ -1,0 +1,143 @@
+Dancing With Music 1!
+=======================
+
+.. raw:: html
+    
+    <div style="background: #C3F8FF" class="admonition note custom">
+        <p style="background: light-blue" class="admonition-title">
+            Follow along: Robot Arm Dancing with music
+        </p>
+        <div class="line-block">
+            <div class="line">The program launching process along with parameter settings are all simplified and set up on the Jupyter Notebook Environment.</div>
+        </div>
+        <ul>
+            <li>Open the 05_09_carri_dance.ipynb Jupyter Notebook</li>
+            <li>Load Arm_Lib module and register the robot arm as an object</li>
+            <li>Initialize the sound file</li>
+            <li>Initialize the starting position of the robot arm </li>
+            <li>Play the music and the dance at the same time</li>
+
+        </ul>
+        <div class="line">(The Jetson Board used for these examples are => Jetson Nano)</div>
+        
+    </div>
+
+
+.. raw:: html
+
+    <hr>
+
+
+
+-   05_09_carri_dance.ipynb
+-   | Running the cell code
+    | `Ctrl + Enter`
+
+.. thumbnail:: /_images/having_fun/arm_dance1.png
+
+-   Robot arm dance example with an exciting music - 1
+
+-   Load Arm_Lib module and register the robot arm as an object
+
+
+.. code-block:: python
+
+    from pygame import mixer
+    import time
+    from Arm_Lib import Arm_Device
+
+    # register the robot arm as an object
+    Arm = Arm_Device()
+    time.sleep(.1)
+
+
+-   Initialize the sound file
+
+.. code-block:: python
+
+    # Register ogg file 
+    mixer.init(48000, 16, 2, 2048)
+    my_sound = mixer.Sound('music.ogg')
+    my_sound.set_volume(0.01)
+
+-   Initialize the starting position of the robot arm 
+
+.. code-block:: python
+
+    # Initialization
+    Arm.Arm_serial_servo_write6(90, 90, 90, 90, 90, 90, 1000)
+
+-   Play the music and the dance at the same time
+
+.. code-block:: python
+
+    Arm.Arm_serial_servo_write6(90, 90, 90, 90, 90, 90, 1000)
+
+    while(1):
+        my_sound.play()
+        # 1번 동작
+        Arm.Arm_serial_servo_write(3, 0, 1500)
+        time.sleep(.001)
+        Arm.Arm_serial_servo_write(4, 180, 1500)
+        time.sleep(.001)
+        Arm.Arm_serial_servo_write(1, 0, 1500)
+        time.sleep(5.5)
+        # 2번 동작
+        Arm.Arm_serial_servo_write(1, 90, 500)
+        time.sleep(1.5)
+        # 3번 동작
+        Arm.Arm_serial_servo_write(1, 180, 500)
+        time.sleep(1.5)
+        # 4번 동작
+        Arm.Arm_serial_servo_write(3, 90, 500)
+        time.sleep(.001)
+        Arm.Arm_serial_servo_write(4, 90, 500)
+        time.sleep(1.5)
+        # 5번 동작
+        Arm.Arm_serial_servo_write(3, 0, 500)
+        time.sleep(.001)
+        Arm.Arm_serial_servo_write(4, 180, 500)
+        time.sleep(1.5)
+        # 6번 동작
+        Arm.Arm_serial_servo_write(1, 90, 1000)
+        time.sleep(1.5)
+        # 7번 동작
+        Arm.Arm_serial_servo_write(1, 0, 1000)
+        time.sleep(1.5)
+        my_sound.stop()
+        break
+
+    Arm.Arm_serial_servo_write6(90, 90, 90, 90, 90, 90, 1000)
+
+
+
+-   Arm Movements
+
+.. code-block:: python
+
+    Arm.Arm_serial_servo_write(3, 0, 500)
+    time.sleep(.001)
+    Arm.Arm_serial_servo_write(4, 180, 500)
+
+.. code-block:: python
+
+    Arm.Arm_serial_servo_write(1, 0, 1000)
+
+.. code-block:: python
+
+    Arm.Arm_serial_servo_write6_array(joints_4, 1500)
+
+.. code-block:: python
+
+    Arm.Arm_serial_servo_write(3, 90, 500)
+    time.sleep(.001)
+    Arm.Arm_serial_servo_write(4, 90, 500)
+
+
+.. code-block:: python
+
+    Arm.Arm_serial_servo_write(3, 0, 500)
+    time.sleep(.001)
+    Arm.Arm_serial_servo_write(4, 180, 500)
+
+-   Movement complete

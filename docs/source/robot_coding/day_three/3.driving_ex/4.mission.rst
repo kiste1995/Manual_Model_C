@@ -1,0 +1,21 @@
+Mission Project
+===============================
+
+.. raw:: html
+
+    <div style="background: #ffe5b4" class="admonition note custom">
+        <p style="background: #ffbf00" class="admonition-title">
+            Project Name: 
+        </p>
+        <div class="line-block">
+            <div class="line"><strong>-</strong> </strong></div>
+            <div class="line"><strong>-</strong> </div>
+            <div class="line"><strong>-</strong> </div>
+        </div>
+    </div>
+
+.. raw:: html
+
+    <div style="position: relative; color: black; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <h2>Overall Description:</h2>
+    </div>

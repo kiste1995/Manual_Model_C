@@ -1,0 +1,26 @@
+Depth Camera Theory
+======================
+
+
+Without the need for special distance sensors such as laser distance detector,
+there are ways to differentiate depth using cameras. 
+Biggest example of this is humans. By using two visual sources, we can calculate
+how far an object is in relation to the host. Similar to this, depth camera utilizes
+stereo camera set up to calculate the distance of an object. 
+
+.. thumbnail:: /_images/ai_training/Model-of-parallel-stereo-camera.png
+
+Our Expert DIY Kit utilizies RealSense D435 Camera which is equipped with stereo camera, IR Projector, and a RGB Module.
+
+
+
+
+
+
+
+
+
+
+Reference:
+
+- Asada, Minoru & Tanaka, Takamaro & Hosoda, Koh. (1999). Visual tracking of unknown moving object by adaptive binocular visual servoing. 249 - 254. 10.1109/MFI.1999.815998. 

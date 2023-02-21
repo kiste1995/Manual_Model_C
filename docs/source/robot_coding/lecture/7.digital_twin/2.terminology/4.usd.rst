@@ -1,0 +1,28 @@
+.. _usd-label:
+
+Universal Scene Description
+=============================
+
+
+Universal Scene Description (USD) is an open an extensible exosystem for describing, composing, simulating, 
+and collaborating within 3D simulated worlds, originally invented by Pixar Animation Studios.
+
+With its design and features, the USD has quickly become the industry stanard for 3D project format. It contains
+important fundamental tools and capabilities accelarting workflows, teams, and projects on a large scale. 
+
+**Benifits of USD format**
+
+
+- USD file format allows for open, extensive framework and ecosystem that contains many APIs from composing, editing, 
+querying, rendering, collaborating, and simulation within 3D virtual worlds. 
+
+- Our project leans in favor for team collaborative works. The USD enables non-destructive workflows and collaboration in scene creation
+  and asset afregation so teams can iterate collaboratively. 
+
+- USD supports custom renderers in a generalized pipeline thanks to its Hydra rendering architecture that provides flexibility in visualizing data. 
+- USD supports any data storage model allowing for disparate data sources.  
+
+
+Within our project the USD file format is used within the Isaac Sim developed within the Omniverse environment. 
+Which ever figures or environment made within the Isaac Sim may be saved in USD file format. And any USD file format 
+may be loaded into the environment.

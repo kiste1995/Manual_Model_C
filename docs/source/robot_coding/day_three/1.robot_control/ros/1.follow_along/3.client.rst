@@ -1,0 +1,87 @@
+.. _Client ROS:
+
+ROS Service Client 
+======================
+
+The Follow Along Examples:
+
+- :ref:`Command ROS`
+- :ref:`Server ROS`
+- :ref:`Client ROS` <- you are here 
+
+.. raw:: html
+    
+    <div style="background: #C3F8FF" class="admonition note custom">
+        <p style="background: light-blue" class="admonition-title">
+            Follow along: ROS Topic Subscriber Example
+        </p>
+        <div class="line-block">
+            <div class="line">The program launching process along with parameter settings are all simplified and set up on the Jupyter Notebook Environment.</div>
+        </div>
+        <ul>
+            <li>Open the 02_01_ros_service_server.ipynb Jupyter Notebook</li>
+            <li>Import the necessary python libraries and modules</li>
+            <li>Follow and Execute the example codes</li>
+
+        </ul>
+        <div class="line">(The Jetson Board used for these examples are => Jetson Nano)</div>
+        
+    </div>
+
+
+.. raw:: html
+
+    <hr>
+
+Open the following jupyter notebook:
+
+-   02_01_ros_service_server.ipynb
+-   To run the cells within the notebook use Ctrl + Enter
+
+
+
+.. thumbnail:: /_images/content_control/comm10.webp
+
+.. thumbnail:: /_images/content_control/comm11.webp
+
+
+-   Import print_function from `__future__` module for Python3 compatibility
+-   Import AddTwoInts, AddTwoIntsResponse from rospy_tutorials.srv module
+-   Import rospy modules
+
+
+.. code-block:: python
+
+    from __future__ import print_function
+    from rospy_tutorials.srv import AddTwoInts,AddTwoIntsResponse
+    import rospy
+
+
+-   Create handle_add_two_ints() function
+-   Output req.a, req.b, req.a + req.b
+-   Return instances of req.a + req.b in AddTwoIntsResponse
+
+.. code-block:: python
+
+    def handle_add_two_ints(req):
+        print("Returning [%s + %s = %s]"%(req.a, req.b, (req.a + req.b)))
+        return AddTwoIntsResponse(req.a + req.b)
+
+-   Create `add_two_ints_server()` function
+-   Create add_two_ints_server Node
+-   Create add_two_ints Service
+
+.. code-block:: python
+
+    def add_two_ints_server():
+        rospy.init_node('add_two_ints_server')
+        s = rospy.Service('add_two_ints', AddTwoInts, handle_add_two_ints)
+        print("Ready to add two ints.")
+        rospy.spin()
+
+-   Execute the add_two_ints_server() function
+
+.. code-block:: python
+
+    add_two_ints_server()
+

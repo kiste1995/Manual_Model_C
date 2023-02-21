@@ -1,0 +1,53 @@
+Overall Explanation
+====================
+
+Overview
+---------
+
+Image Recognition, in the context of computer vision, is the computer's ability 
+to recognize and identify an object through an image, a video or a live camera. 
+
+This allows us to solve many real world problems from governments detecting criminal
+amongst crowd, phone locking systems, self-driving cars and so on. 
+
+Similar to our googlenet example we can detect 1000 different objects from animals to house hold items. 
+
+
+AlexNet
+----------
+
+What is GoogleNet?
+
+Alex net is an artificial intelligence model that was developed and designed by Alex Krizhevsky in collaboration
+with Ilya Sutskever and Geoffrey Hinton. It adopts Convolutional Neural Network (CNN) to process the image. 
+
+When we look at a picture, each of our neurons takes a part of the image that we saw. 
+When those neurons connect with each other, a image is processed within our brain.
+
+CNN tries to replicate our brain, by having layers that processes simple parts of the 
+image such as lines, and curves and combining the layers to process more complicated 
+patters such as faces, objects and so on. 
+
+The AlexNet stacks and processes these CNN layers to create a neural network model 
+that can identify faces, objects and others in a detailed and accurate way. 
+
+
+How are GoogleNet and AlexNet?
+-------------------------------
+
+If both GoogleNet and AlexNet are using the same CNN, why are they different?
+Although they do use the same CNN to process the image, the number of layers, and the number of stacks and arangements
+for the CNN for each of the model is very different. 
+
+
+
+Similar to how camera lenses use multiple stacks of magnifying glasses with different settings to create clear picture,
+Both of our networks use different arangements of CNN with different additional layers and settings to deliver 
+accurate identification of a given image. 
+
+
+
+
+
+*reference:*  `<https://github.com/dusty-nv/jetson-inference/blob/master/docs/imagenet-console-2.md>`_
+*reference:* `<https://towardsdatascience.com/convolutional-neural-networks-explained-9cc5188c4939>`_

@@ -1,0 +1,76 @@
+ROS Topic Subscriber
+======================
+
+
+.. raw:: html
+    
+    <div style="background: #C3F8FF" class="admonition note custom">
+        <p style="background: light-blue" class="admonition-title">
+            Follow along: ROS Topic Subscriber Example
+        </p>
+        <div class="line-block">
+            <div class="line">The program launching process along with parameter settings are all simplified and set up on the Jupyter Notebook Environment.</div>
+        </div>
+        <ul>
+            <li>Open the 01_02_ros_topic_subscriber.ipynb Jupyter Notebook</li>
+            <li>Import the necessary python libraries and modules</li>
+            <li>Follow and Execute the example codes</li>
+
+        </ul>
+        <div class="line">(The Jetson Board used for these examples are => Jetson Nano)</div>
+        
+    </div>
+
+
+.. raw:: html
+
+    <hr>
+
+
+Open the following jupyter notebook:
+
+- 03_02_ros_topic_subscriber.ipynb
+- To run the cells within the notebook use *Ctrl + Enter*
+
+.. thumbnail:: /_images/content_control/comm2.png
+
+|
+
+Import the necessary python libraries and modules
+
+.. code-block:: python
+
+    import rospy
+    from std_msgs.msg import String
+
+
+- Create `callback()` function
+- Within the callback function:
+
+    - Node id and message data output
+
+.. code-block:: python
+
+    def callback(data):
+        rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
+
+
+- Create `listener()` function
+- Within the listener function:
+
+    - Create listener Node
+    - Subscribe to Chatter Topic Message
+    - Handle Subscriber Callback
+
+.. code-block:: python
+
+    def listener():
+        rospy.init_node('listener', anonymous=True)
+        rospy.Subscriber("chatter", String, callback)
+        rospy.spin()
+
+- Execute the listener() function with handler functions. 
+
+.. code-block:: python
+
+    listener()
