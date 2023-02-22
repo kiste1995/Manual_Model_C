@@ -2,14 +2,15 @@ ZetaBank Lecture
 ===================
 
 
-Welcome to ZetaBank Educational Program!
+Welcome to ZetaBank Customer Service Robot!
 
-To foster future talent, we from ZetaBank provides the Philosophy of Education.
+To introduce someone to Information about an Event, try a Customer Service Robot.
+The customer service robot is called Model C.
 
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube.com/embed/7_u3JyOqbPo" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+        <iframe src="https://www.youtube.com/watch?v=UQHlE8yW_Hk" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
 |
@@ -55,7 +56,7 @@ In Education Provided by ZetaBank:
 
 
 .. toctree:: 
-    :caption: Nano Degree Program
+    :caption: Model C - Costomer service
     :maxdepth: 1
     :hidden:
     :titlesonly: 
