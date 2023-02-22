@@ -2,9 +2,10 @@ Experience the Technology of the Future and Coding
 ====================================================
 
 
-Welcome to ZetaBank Educational Program!
+Welcome to ZetaBank Customer Service Robot!
 
-To foster future talent, we from ZetaBank provides the Philosophy of Education.
+To introduce someone to Information about an Event, try a Customer Service Robot.
+The customer service robot is called Model C.
 
 .. raw:: html
 
