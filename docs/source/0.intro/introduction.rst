@@ -7,9 +7,6 @@ Welcome to ZetaBank Customer Service Robot!
 To introduce someone to Information about an Event, try a Customer Service Robot.
 The customer service robot is called Model C.
 
-.. thumbnail:: /_images/robot/CD.jpg
-      :width: 250
-
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
