@@ -5,54 +5,26 @@ ZetaBank Robot
 Welcome! This is a place to introduce Zeta Bank's robots!
 
 .. thumbnail:: /_images/robot/CD.jpg
-      :width: 500
+      :width: 800
       :height: 500
 
 .. raw:: html
 
     <div>
-        <h2>The Future Convergence Curriculum Philosophy of ZetaBank</h2>
+        <h2>Two large robot models from ZetaBank</h2>
     </div>
 
-1. We provide educational skills that promote students thinking skills with cutting-edge technology such as Big Data, Artificial Intelligence, Virtualization, Robotics, Autonomous Driving.
-2. We believe that better machine-human interaction is the future of technology.
-3. We promote the convergence of educational majors.
-
-
-.. raw:: html
-    
-    <div>
-        <h2>Overall Lecture Plan</h2>
-    </div>
-
-In Education Provided by ZetaBank:
-
-- We Provide Self-Learning Opportunities:
-
-  .. thumbnail:: /_images/ai_training/zeta_edu.jpg
-   :width: 250
-|
-
-- We Provide Communication and Cooperation Training:
-
-  .. thumbnail:: /_images/ai_training/zeta_edu2.jpg
-   :width: 250
-
-
-
+1. Model C - It is a untact service robot that introduces the place at any place, introduces what events are held, and provides route-finding services.
+2. Model D - In some places, wet disinfection is carried out by spraying disinfectant solutions, and dry disinfection is carried out using UV lamps and air purification functions.
 
 .. toctree:: 
-    :caption: Model C - Costomer service
+    :caption: Model C - Untact service
     :maxdepth: 1
     :hidden:
     :titlesonly: 
 
     0.intro/introduction
-    0.intro/explanation
-    0.intro/coding_ex
-    0.intro/robot_ex
-    0.intro/mission
-
+    0.intro/operate
 
 .. toctree:: 
     :maxdepth: 5

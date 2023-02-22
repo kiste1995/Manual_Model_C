@@ -1,4 +1,4 @@
-Overall Lecture Explanation
+How to operate
 =============================
 
 We from ZetaBank provide multiple different means to provide educational services to students. 

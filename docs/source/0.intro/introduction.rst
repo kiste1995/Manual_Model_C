@@ -1,11 +1,11 @@
-Experience the Technology of the Future and Coding
+Functions
 ====================================================
 
 
-Welcome to ZetaBank Customer Service Robot!
+Welcome to ZetaBank Untact Service Robot!
 
-To introduce someone to Information about an Event, try a Customer Service Robot.
-The customer service robot is called Model C.
+To introduce someone to Information about an Event, try a Untact Service Robot.
+The Untact service robot is called Model C.
 
 .. raw:: html
 
