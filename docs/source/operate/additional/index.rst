@@ -1,4 +1,4 @@
-Day Three Lecture
+Additional Settings
 ========================
 
 Here are the contents for Day Three Lecture:

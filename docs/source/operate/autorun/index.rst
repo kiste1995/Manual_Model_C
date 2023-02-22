@@ -1,4 +1,4 @@
-Day Two Lecture
+Auto Run
 ==================
 
 Here are the contents for Day Two Lecture:
