@@ -5,7 +5,8 @@ ZetaBank Robot
 Welcome! This is a place to introduce Zeta Bank's robots!
 
 .. thumbnail:: /_images/robot/CD.jpg
-      :width: 250
+      :width: 500
+      :height: 500
 
 .. raw:: html
 
