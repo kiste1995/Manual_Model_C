@@ -24,13 +24,6 @@ Welcome! This is a place to introduce Zeta Bank's robots!
         <h2>Overall Lecture Plan</h2>
     </div>
 
-
-Education based on information cramming:
-
-   .. thumbnail:: /_images/robot/CD.jpg
-      :width: 250
-|
-
 In Education Provided by ZetaBank:
 
 - We Provide Self-Learning Opportunities:
