@@ -1,19 +1,11 @@
-ZetaBank Lecture
+ZetaBank Robot
 ===================
 
 
-Welcome to ZetaBank Customer Service Robot!
+Welcome! This is a place to introduce Zeta Bank's robots!
 
-To introduce someone to Information about an Event, try a Customer Service Robot.
-The customer service robot is called Model C.
-
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://youtube.com/embed/dhHuwif5Q4M" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
-
-|
+.. thumbnail:: /_images/robot/CD.jpg
+      :width: 250
 
 .. raw:: html
 
