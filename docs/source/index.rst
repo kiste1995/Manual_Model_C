@@ -27,7 +27,7 @@ Welcome! This is a place to introduce Zeta Bank's robots!
 
 Education based on information cramming:
 
-   .. thumbnail:: /_images/ai_training/cramming.jpg
+   .. thumbnail:: /_images/robot/CD.jpg
       :width: 250
 |
 
