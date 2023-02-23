@@ -18,7 +18,7 @@ The Untact service robot is called Model C.
 .. raw:: html
 
     <div>
-        <h1>The Future Convergence Curriculum Philosophy of ZetaBank</h1>
+        <h3>The Future Convergence Curriculum Philosophy of ZetaBank</h3>
     </div>
 
 1. We provide educational skills that promote students thinking skills with cutting-edge technology such as Big Data, Artificial Intelligence, Virtualization, Robotics, Autonomous Driving.
