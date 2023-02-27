@@ -7,18 +7,13 @@ Motor control programs
 
 Distance measurement sensors, and robot variables
 
-
-Explanation
-^^^^^^^^^^^^
+----------------------------------------
 
 **Terminal execution screen when button is clicked**
 
-.. list-table::
+.. thumbnail:: /_images/start_gui/bringup.png
 
-    * - .. thumbnail:: /_images/start_gui/bringup.png
-            :group: basic1
-      - .. thumbnail:: /_images/start_gui/bringup2.png
-            :group: basic1
+.. thumbnail:: /_images/start_gui/bringup2.png
 
 
 
