@@ -7,7 +7,7 @@ Motor control programs
 
 Distance measurement sensors, and robot variables
 
-----------------------------------------
+====================================================
 
 **Terminal execution screen when button is clicked**
 
