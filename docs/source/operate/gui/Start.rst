@@ -7,18 +7,18 @@ Start
 
 
 
-- Running multiple terminals required to run the program
+**Running multiple terminals required to run the program**
 
   .. thumbnail:: /_images/start_gui/start2.jpg
 
 
 
-- Program initial execution screen: Required buttons are activated
+**Program initial execution screen: Required buttons are activated**
 
   .. thumbnail:: /_images/start_gui/start3.jpg
 
 
 
-- ZBMRGS.launch execution screen
+**ZBMRGS.launch execution screen**
 
   .. thumbnail:: /_images/start_gui/start4.jpg    
