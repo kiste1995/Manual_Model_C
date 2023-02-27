@@ -1,33 +1,21 @@
 How to operate
 =============================
 
-We from ZetaBank provide multiple different means to provide educational services to students. 
+Model C has two modes of operation.
 
-We promote Havruta educational methods, which bases education on verbal communications such as questions and debate.
+Manual operation using GUI and execution of individual functions.
 
-All our classes are to be student-centered participatory classes. 
-
-.. thumbnail:: /_images/ai_training/edu.png
+Automatic execution of schedules using PM2.
 
 
-Educational AI Robot Contents
--------------------------------
-
-
-Autonomous Driving SW
+Using GUI
 ^^^^^^^^^^^^^^^^^^^^^^^
 
--   With our Autonomous Driving SW material we utilize two educational robots (Basic V1.0, Super ARM V1.0) to provide AI autonomous driving education. We also provide different mapping applications. 
+-    It is used by developers or administrators to test individual functions or perform debugging by checking logs and error codes.
 
-**Basic V1.0:** 
-
-.. list-table::
-
-    * - .. thumbnail:: /_images/ai_training/black_robot.jpg
-            :group: basic1
-      - .. thumbnail:: /_images/ai_training/dino_robot.png
-            :group: basic1
-
+.. thumbnail:: /_images/start_gui/start.jpg
+      :width: 500
+      :height: 300
 
 **Super Arm V1.0:** 
 
