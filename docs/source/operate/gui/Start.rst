@@ -1,7 +1,7 @@
 Start
 =====================
 
-- Enter command : roslaunch robot_control_gui ZBMRGS.launch
+**Enter command : roslaunch robot_control_gui ZBMRGS.launch**
 
   .. thumbnail:: /_images/start_gui/start1.jpg
 
