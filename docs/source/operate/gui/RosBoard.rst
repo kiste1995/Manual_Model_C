@@ -1,2 +1,2 @@
-Get to know your Robot
+RosBoard
 ==========================

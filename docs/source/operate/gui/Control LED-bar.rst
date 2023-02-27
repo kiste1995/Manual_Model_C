@@ -1,2 +1,2 @@
-Get to know your Robot
+Control LED-bar
 ==========================

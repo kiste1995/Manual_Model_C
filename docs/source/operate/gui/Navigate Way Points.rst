@@ -1,2 +1,2 @@
-Get to know your Robot
+Navigate Way Points
 ==========================
