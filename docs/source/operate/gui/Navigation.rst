@@ -16,3 +16,4 @@ Robot Autonomous Driving Algorithm
 **Terminal execution screen when button is clicked**
 
 .. thumbnail:: /_images/start_gui/navi3.png
+
