@@ -10,6 +10,7 @@ Indoor air quality and sensor data Topic data display
 .. thumbnail:: /_images/start_gui/configuration.png
 
 --------------------------------------------------------------------------
+
 .. raw:: html
 
     <div style="background: #D3D3D3" class="admonition note custom">
