@@ -33,7 +33,7 @@ For illustrative purposes, the coordinates are given as name1, name2, and name3.
 
 .. thumbnail:: /_images/start_gui/naviwaypoints4.png
 
-- After selecting name3, press the start button and check the start phrase in the message box.
+- After selecting name1, press the start button and check the start phrase in the message box.
 
 ------------------------------------------------------------------------------------------------------
 
@@ -53,4 +53,4 @@ For illustrative purposes, the coordinates are given as name1, name2, and name3.
 
 .. thumbnail:: /_images/start_gui/naviwaypoints7.png
 
-- When costmap is cleared, it moves to name3 coordinates.
+- When costmap is cleared, it moves to name1 coordinates.
