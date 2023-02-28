@@ -19,18 +19,6 @@ Air purifier operation
 
 **Air purifier speed adjustment**
 
-.. .. thumbnail:: /_images/start_gui/airpuri3.png
-..     :width: 400
-..     :height: 200
-
-.. .. thumbnail:: /_images/start_gui/airpuri5.png
-..     :width: 400
-..     :height: 200
-
-.. .. thumbnail:: /_images/start_gui/airpuri6.png
-..     :width: 400
-..     :height: 200
-
 .. list-table::
 
     * - .. thumbnail:: /_images/start_gui/airpuri3.png
