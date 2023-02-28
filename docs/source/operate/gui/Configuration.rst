@@ -12,7 +12,7 @@ Indoor air quality and sensor data Topic data display
 .. raw:: html
 
     <div style="background: #D3D3D3" class="admonition note custom">
-        <p style="background: #FFFAFA" class="admonition-title">
+        <p style="background: #A9A9A9" class="admonition-title">
             Traj Loop Mode
         </p>
         <ul>
