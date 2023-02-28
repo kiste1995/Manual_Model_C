@@ -36,12 +36,11 @@ Indoor air quality and sensor data Topic data display
             Auto Charging
         </p>
         <ul>
-            <li> If you could add another sensor to the robot what would that be?</li>
             <li>
-                Why do you think we need the said sensor and where would it be used?
+                Automatic charging in low battery condition
                 <ul>
-                    <li>For example, we added lidar sensors to have a functional navigational system. The lidar sensors provide 360 distnace sensor, providing a local 2D mapping for the robot.</li>
-                    <li>For lidar sensor, we would add a Topic that would recieve the node connected to the output of the sensor and Publishes values to the Topic. We may use this information by Subscribing to the said Topic.</li>
+                    <li>The battery may discharge while driving if charging is not possible due to special circumstances (obstacles in front of the charging station, power failure)</li>
+                    <li>In the case of scheduling, since the distance between charging times is long, when the low battery state is reached, the driving can be stopped and the charging process can be performed.</li>
                 </ul>
             </li>
         </ul>
@@ -56,12 +55,10 @@ Indoor air quality and sensor data Topic data display
             Auto Purifier
         </p>
         <ul>
-            <li> If you could add another sensor to the robot what would that be?</li>
             <li>
-                Why do you think we need the said sensor and where would it be used?
+                Air purifier automatic operation
                 <ul>
-                    <li>For example, we added lidar sensors to have a functional navigational system. The lidar sensors provide 360 distnace sensor, providing a local 2D mapping for the robot.</li>
-                    <li>For lidar sensor, we would add a Topic that would recieve the node connected to the output of the sensor and Publishes values to the Topic. We may use this information by Subscribing to the said Topic.</li>
+                    <li>Activates when harmful substances above the standard value are detected based on air information</li>
                 </ul>
             </li>
         </ul>
@@ -76,12 +73,12 @@ Indoor air quality and sensor data Topic data display
             Use Sonar
         </p>
         <ul>
-            <li> If you could add another sensor to the robot what would that be?</li>
             <li>
-                Why do you think we need the said sensor and where would it be used?
+                Ultrasonic sensor used for robot backwards
                 <ul>
-                    <li>For example, we added lidar sensors to have a functional navigational system. The lidar sensors provide 360 distnace sensor, providing a local 2D mapping for the robot.</li>
-                    <li>For lidar sensor, we would add a Topic that would recieve the node connected to the output of the sensor and Publishes values to the Topic. We may use this information by Subscribing to the said Topic.</li>
+                    <li>There are frequent cases where the robot cannot move forward due to frontal and side obstacles.</li>
+                    <li>Set to move away from obstacles after moving backward for a set period of time on the driving algorithm</li>
+                    <li>Since the lidar of the robot cannot detect the rear, it is used to reverse to a distance where an object is not detected within a certain distance through the sonar sensor.</li>
                 </ul>
             </li>
         </ul>
