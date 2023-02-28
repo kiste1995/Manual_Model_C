@@ -14,7 +14,6 @@ Here are the contents how to use GUI
     WPCtrl
     InitPos
     Motion Ctrl
-    Init Angle
     Run TeleOP
     Configuration
     Sonar Sensor

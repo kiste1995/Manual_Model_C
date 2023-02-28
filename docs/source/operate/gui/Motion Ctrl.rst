@@ -3,6 +3,8 @@ Motion Ctrl
 
 Robot manual movement control program using keys
 
+It works when you hold down the button, and stops when you release it.
+
 --------------------------------------------------------------------------------
 
 **GUI execution screen when button is clicked**
