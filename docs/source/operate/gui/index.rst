@@ -16,7 +16,6 @@ Here are the contents how to use GUI
     Motion Ctrl
     Run TeleOP
     Sonar Sensor
-    RosBoard
     Navigate Way Points
     Navigate Trajectories
     Parking C.S.
@@ -31,4 +30,5 @@ Here are the contents how to use GUI
     Control LED-bar
     Ready
     Mapping
+    RosBoard
 
