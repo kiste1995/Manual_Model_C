@@ -15,7 +15,6 @@ Here are the contents how to use GUI
     InitPos
     Motion Ctrl
     Run TeleOP
-    Configuration
     Sonar Sensor
     RosBoard
     Navigate Way Points
@@ -23,6 +22,7 @@ Here are the contents how to use GUI
     Parking C.S.
     Air Information
     Air Purifier
+    Configuration
     Cam View
     RS View
     USB Cam Topic
