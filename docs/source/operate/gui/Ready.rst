@@ -35,19 +35,19 @@ Automatic execution of packages for robot driving
 
 --------------------------------------------------------------------------------------
 
-**Navigation**
+**4. Navigation**
 
 .. thumbnail:: /_images/start_gui/autorun6.png
 
 --------------------------------------------------------------------------------------
 
-**NaviRviz**
+**5. NaviRviz**
 
 .. thumbnail:: /_images/start_gui/autorun7.png
 
 --------------------------------------------------------------------------------------
 
-**WPCtrl**
+**6. WPCtrl**
 
 .. thumbnail:: /_images/start_gui/autorun8.png
 
