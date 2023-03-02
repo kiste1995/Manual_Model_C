@@ -5,7 +5,7 @@ Control the LED-Bar mounted on the top of the robot
 
 --------------------------------------------------------------------------
 
-**Move to the front of the charging station**
+**GUI execution screen when button is clicked**
 
 .. thumbnail:: /_images/start_gui/led2.png
 
