@@ -10,14 +10,16 @@ Control the LED-Bar mounted on the top of the robot
 .. thumbnail:: /_images/start_gui/led2.png
 
 .. thumbnail:: /_images/start_gui/led.png
+    :width: 300
+    :height: 100
 
 - At the bottom of mode, set the LED operation mode.
 
 ---------------------------------------------------------------------------------------
 
-.. thumbnail:: /_images/start_gui/led3.jpg
+.. thumbnail:: /_images/start_gui/led3.png
 
-.. thumbnail:: /_images/start_gui/led4.jpg          
+.. thumbnail:: /_images/start_gui/led4.png          
 
 - Select the empty icon under color to specify the led color.
 
