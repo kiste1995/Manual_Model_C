@@ -11,4 +11,4 @@ Outputs a window to get the robot's current coordinates
 
 --------------------------------------------------------------------------------
 
-.. thumbnail:: /_images/start_gui/amcl.png
+.. thumbnail:: /_images/start_gui/amcl2.png
