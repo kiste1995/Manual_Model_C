@@ -13,6 +13,6 @@ Running the screen of the rear camera installed on the robot
 
 --------------------------------------------------------------------------------
 
-**cam view execution screen**
+**Cam view execution screen**
 
 .. thumbnail:: /_images/start_gui/camview3.png
