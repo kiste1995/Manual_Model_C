@@ -11,7 +11,7 @@ Automatic execution of packages for robot driving
 
 .. thumbnail:: /_images/start_gui/autorun2.png
     :width: 300
-    :height: 50
+    :height: 100
 
 - Just wait for the gauge bar to reach 100 percent.
 
