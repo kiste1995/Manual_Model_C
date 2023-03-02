@@ -24,7 +24,6 @@ Here are the contents how to use GUI
     Configuration
     Cam View
     RS View
-    USB Cam Topic
     AMCL Pos
     UVC
     Control LED-bar
