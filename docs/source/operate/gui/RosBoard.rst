@@ -34,16 +34,66 @@ Web-based ROS topic and robot control program execution
 
 --------------------------------------------------------------------------------------
 
+2. Air Purifier
+
 .. thumbnail:: /_images/start_gui/rosboard6.png
 
-- Robot remote control
-- Left / Right / Up / Down / Stop
-- Linear velocity / Angular velocity
+- Air purifier operation/stop
+- Specify speed value (Enter Value, Dial Adjustment)
 
 --------------------------------------------------------------------------------------
 
-**Save Map**
+3. UVC
 
-.. thumbnail:: /_images/start_gui/mapping7.png
+.. thumbnail:: /_images/start_gui/rosboard7.png
 
-- After drawing the map, click save map.
+- UVC ON / OFF
+
+--------------------------------------------------------------------------------------
+
+4. LED - Bar Control
+
+.. thumbnail:: /_images/start_gui/rosboard8.png
+
+- After selecting a color, change the LED color through the send button
+
+--------------------------------------------------------------------------------------
+
+5. etc data
+
+.. thumbnail:: /_images/start_gui/rosboard9.png
+
+- Battery status display
+- Output sonar sensor value
+- Output scan topic data
+- Output Robot pos data
+
+--------------------------------------------------------------------------------------
+
+6. Air Information
+
+.. thumbnail:: /_images/start_gui/rosboard10.png
+
+- Output air quality sensor topic
+
+--------------------------------------------------------------------------------------
+
+7. TF topic
+
+.. thumbnail:: /_images/start_gui/rosboard11.png
+
+- Output transforms topic
+
+--------------------------------------------------------------------------------------
+
+8. USB Cam
+
+.. thumbnail:: /_images/start_gui/rosboard12.png
+
+.. thumbnail:: /_images/start_gui/rosboard13.png
+
+- Output cam view
+
+.. thumbnail:: /_images/start_gui/rosboard14.png
+
+- End cam view
