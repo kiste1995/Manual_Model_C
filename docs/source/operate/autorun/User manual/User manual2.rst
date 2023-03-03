@@ -31,3 +31,12 @@ This is an additional management method in addition to the scheduling execution 
 - If discharged inevitably,
 - Open the case and take out the charging cable.
 - You can manually charge the battery by plugging it into the connector on the right side of the station.
+
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+
+- If the robot runs out of the designated route or place, turn off the robot, move it to the starting position, and then turn on the power.
+
+- If the robot is stationary for a long time, circle around the robot a few times. If it still remains stationary, power off the robot, move it to the starting position, and power it on.
+
+- If something goes wrong while the station is charging, press the e-stop button to slowly pull the robot back and then turn off the power.
