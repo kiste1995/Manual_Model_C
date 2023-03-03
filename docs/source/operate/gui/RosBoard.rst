@@ -25,7 +25,7 @@ Web-based ROS topic and robot control program execution
 
 **Launch web browser**
 
-Robot remote control
+1. Robot remote control
 
 .. thumbnail:: /_images/start_gui/rosboard5.png
 
