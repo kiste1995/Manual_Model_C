@@ -1,4 +1,4 @@
-Administrator's Manual
+Administrator's manual
 ==================
 
 This manual is for administrators who modify / manage robot programs.
