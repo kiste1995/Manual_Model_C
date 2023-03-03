@@ -1,7 +1,7 @@
 Administrator's Manual
 ==================================
 
-This is a description to provide a method for a general user to drive the robot.
+This manual is for administrators who modify / manage robot programs.
 
 --------------------------------------------------------------------------------
---------------------------------------------------------------------------------
+
