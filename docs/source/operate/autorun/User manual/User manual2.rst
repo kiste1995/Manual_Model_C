@@ -1,4 +1,4 @@
-User manual - Other operation method
+Other operation method
 ==================
 
 This is an additional management method in addition to the scheduling execution method.

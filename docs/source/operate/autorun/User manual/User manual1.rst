@@ -1,4 +1,4 @@
-User manual - How it works
+How it works
 ==================
 
 This is a description to provide a method for a general user to drive the robot.
