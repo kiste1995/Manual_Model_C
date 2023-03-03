@@ -6,6 +6,5 @@ Here are the contents for Day Two Lecture:
 
 .. toctree:: 
 
-    drive
-    get_to_know
-    ai
+    User manual
+    Administrator's Manual
