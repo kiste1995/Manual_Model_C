@@ -5,5 +5,4 @@ This explains how to automatically execute scheduling when the robot starts usin
 
 .. toctree:: 
 
-    User manual/index
     Administrator's manual/index
