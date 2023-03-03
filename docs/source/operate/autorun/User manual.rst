@@ -3,26 +3,27 @@ User manual
 
 This is a description to provide a method for a general user to drive the robot.
 
---------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
-**Run Bringup & M - LRF**
+.. thumbnail:: /_images/autorun/easy.jpg
 
-.. thumbnail:: /_images/start_gui/mapping.png
-
-.. raw:: html
-
-    <div style="background: #D3D3D3" class="admonition note custom">
-        <ul>
-            <li>
-                Repeated trajectory driving
-            </li>
-        </ul>
-    </div>
+- Place robot in starting position
 
 --------------------------------------------------------------------------------------
 
-**Run SLAM(GM)**
+.. thumbnail:: /_images/autorun/easy2.png
 
-.. thumbnail:: /_images/start_gui/mapping2.png
+- Operation of the lower left switch on the basis of facing the robot
 
 --------------------------------------------------------------------------------------
+
+.. thumbnail:: /_images/autorun/easy3.jpg
+
+- Wait 2 minutes
+- LED changes in order of white, green, blue
+- Start driving at the same time as the blue LED turns
+
+--------------------------------------------------------------------------------------
+
+**Scheduling is automatically executed when the robot starts driving.**
