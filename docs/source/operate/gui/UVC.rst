@@ -9,6 +9,6 @@ Operation of the UVC lamp at the bottom of the robot
 
 .. thumbnail:: /_images/start_gui/uvc.png
 
-.. thumbnail:: /_images/start_gui/uvc2.png
+.. thumbnail:: /_images/start_gui/uvc2.jpg
     :width: 300
     :height: 100
