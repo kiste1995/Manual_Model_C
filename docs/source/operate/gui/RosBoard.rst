@@ -10,8 +10,6 @@ Web-based ROS topic and robot control program execution
 .. thumbnail:: /_images/start_gui/rosboard.png
 
 .. thumbnail:: /_images/start_gui/rosboard2.png
-    :width: 300
-    :height: 100
 
 --------------------------------------------------------------------------------------
 
