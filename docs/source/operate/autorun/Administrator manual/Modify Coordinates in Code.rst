@@ -1,7 +1,7 @@
-Administrator's Manual
+Set coordinates
 ==================================
 
-This manual is for administrators who modify / manage robot programs.
+Coordinate setting and file application essential for driving
 
 --------------------------------------------------------------------------------
 

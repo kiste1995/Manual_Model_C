@@ -1,7 +1,8 @@
 Auto Run
 ==================
 
-This explains how to automatically execute scheduling when the robot starts using pm2.
+How to start scheduling automatically when the robot starts up
+Additional explanation needed to manage the robot
 
 .. toctree::
 
