@@ -34,8 +34,21 @@ This is an additional management method in addition to the scheduling execution 
 
 ---------------------------------------------------------------------------------------------------------------
 
+.. raw:: html
+
+    <div style="background: #D3D3D3" class="admonition note custom">
+        <p style="background: #A9A9A9" class="admonition-title">
+            Actions in case of other problems
+        </p>
+        <ul>
+            <li>If the robot runs out of the designated route or place, turn off the robot, move it to the starting position, and then turn on the power.</li>
+            <li>If the robot is stationary for a long time, run a few laps around the robot. If it still remains stationary, power off the robot, move it to the starting position, and power it on.</li>
+            <li>If something goes wrong while the station is charging, press the e-stop button to slowly pull the robot back and then turn off the power.</li>
+        </ul>
+    </div>
+
 - If the robot runs out of the designated route or place, turn off the robot, move it to the starting position, and then turn on the power.
 
-- If the robot is stationary for a long time, circle around the robot a few times. If it still remains stationary, power off the robot, move it to the starting position, and power it on.
+- If the robot is stationary for a long time, run a few laps around the robot. If it still remains stationary, power off the robot, move it to the starting position, and power it on.
 
 - If something goes wrong while the station is charging, press the e-stop button to slowly pull the robot back and then turn off the power.
