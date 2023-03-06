@@ -1,4 +1,4 @@
-How it works
+How to start
 ==================
 
 This is a description to provide a method for a general user to drive the robot.
