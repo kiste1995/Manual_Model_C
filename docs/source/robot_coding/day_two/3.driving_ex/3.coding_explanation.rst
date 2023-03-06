@@ -1,6 +1,0 @@
-Coding Explanation
-====================
-
-Robot Movement
----------------
-
