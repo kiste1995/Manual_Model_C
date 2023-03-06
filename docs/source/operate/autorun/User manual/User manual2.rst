@@ -1,4 +1,4 @@
-Other operation method
+Further explanation
 ==================
 
 This is an additional management method in addition to the scheduling execution method.

@@ -5,5 +5,5 @@ This manual is for administrators who modify / manage robot programs.
 
 .. toctree:: 
 
-    PM2
-    src
+    Program installation for user manual execution
+    Modify Coordinates in Code
