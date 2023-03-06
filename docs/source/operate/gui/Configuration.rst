@@ -1,8 +1,6 @@
 Configuration
 ==========================
 
-Indoor air quality and sensor data Topic data display
-
 --------------------------------------------------------------------------
 
 **GUI execution screen when button is clicked**
