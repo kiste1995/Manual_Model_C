@@ -71,7 +71,7 @@ The same applies when using the GUI.
 
 **Set robot init pose**
 
-.. thumbnail:: /_images/autorun/start.png
+.. thumbnail:: /_images/autorun/init.png
     :width: 500
     :height: 300
 

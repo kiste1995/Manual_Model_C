@@ -57,16 +57,6 @@ PM2 installation work for automatic scheduling execution when the robot is runni
 
 --------------------------------------------------------------------------------
 
-**pm2 path**
-
-.. thumbnail:: /_images/autorun/pm7.png
-    :width: 500
-    :height: 300
-
-- Enter the printed command
-
---------------------------------------------------------------------------------
-
 **pm2 save**
 
 .. thumbnail:: /_images/autorun/pm8.png
