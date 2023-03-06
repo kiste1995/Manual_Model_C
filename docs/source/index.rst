@@ -33,7 +33,6 @@ Welcome! This is a place to introduce Zeta Bank's robots!
 
     operate/gui/index
     operate/autorun/index
-    operate/additional/index
 
 
 

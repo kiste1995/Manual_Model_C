@@ -26,9 +26,3 @@ Auto Run
 .. thumbnail:: /_images/start_gui/pm2.jpg
       :width: 500
       :height: 300
-
-
-Additioanl Settings
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
--    Additional instructions for changing map and coordinate settings. Through this, you can perform scheduling tasks using the desired map and coordinates.      
