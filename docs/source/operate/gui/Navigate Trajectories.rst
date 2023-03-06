@@ -11,8 +11,6 @@ Desired coordinates are registered in trajectories, and it travels through these
 
 .. thumbnail:: /_images/start_gui/trajec.png
 
-.. thumbnail:: /_images/start_gui/trajec2.png
-
 --------------------------------------------------------------------------
 
 **RVIZ execution screen when button is clicked**
