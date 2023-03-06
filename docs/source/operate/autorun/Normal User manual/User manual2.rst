@@ -46,9 +46,3 @@ This is an additional management method in addition to the scheduling execution 
             <li>If something goes wrong while the station is charging, press the e-stop button to slowly pull the robot back and then turn off the power.</li>
         </ul>
     </div>
-
-- If the robot runs out of the designated route or place, turn off the robot, move it to the starting position, and then turn on the power.
-
-- If the robot is stationary for a long time, run a few laps around the robot. If it still remains stationary, power off the robot, move it to the starting position, and power it on.
-
-- If something goes wrong while the station is charging, press the e-stop button to slowly pull the robot back and then turn off the power.
