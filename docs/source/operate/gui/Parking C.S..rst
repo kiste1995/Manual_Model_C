@@ -55,3 +55,18 @@ Carrying out automatic parking to the charging station
 .. thumbnail:: /_images/start_gui/parking9.png
 
 - The charge LED turns off, and the message "Cancel parking charge station" is displayed in the message box.
+
+------------------------------------------------------------------------------------
+
+.. list-table::
+
+    * - .. thumbnail:: /_images/lecture/purple.jpg
+            :group: basic1
+      - .. thumbnail:: /_images/lecture/green.jpg
+            :group: basic1
+
+- When a charging command is received, the LED changes to purple and moves in front of the station.
+- When docking is complete, the color of the led changes according to the robot's current battery level.
+- Full Bat State : Green
+- Middle Bat State : Yellow Blink
+- Low Bat State : Red Blink
