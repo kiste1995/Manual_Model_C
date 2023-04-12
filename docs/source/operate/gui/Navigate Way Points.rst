@@ -11,11 +11,11 @@ For illustrative purposes, the coordinates are given as name1, name2, and name3.
 
 .. thumbnail:: /_images/start_gui/naviwaypoints.png
 
-- After selecting name3, press the start button.
+- After selecting name3, press the start button. The start button is disabled, and the stop button is enabled.
 
-- The start button is disabled and the stop button is enabled.
+- When you arrive at your destination, the start button is enabled and the stop button is disabled.
 
-- It is displayed in the message box, and the LED color under the navi changes to blue.
+- It is displayed in the message box.
 
 ------------------------------------------------------------------------------------------------------
 
