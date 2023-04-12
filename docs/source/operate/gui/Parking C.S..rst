@@ -25,7 +25,7 @@ Carrying out automatic parking to the charging station
 
 .. thumbnail:: /_images/start_gui/parking4.png
 
-- Charging station coordinates displayed in terminal
+- When you arrive at the charging station, a message is displayed on the terminal.
 
 --------------------------------------------------------------------------
 
