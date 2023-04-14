@@ -21,7 +21,7 @@ This is an additional management method in addition to the scheduling execution 
     :width: 500
     :height: 300
 
-- The case can be opened by pulling the rear hook.
+- The case can be opened by pulling the rear hook. (Each robot version has a different way to open it.)
 
 --------------------------------------------------------------------------------------
 
