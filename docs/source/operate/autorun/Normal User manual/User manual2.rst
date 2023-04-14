@@ -6,13 +6,14 @@ This is an additional management method in addition to the scheduling execution 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
-.. thumbnail:: /_images/autorun/easy4.png
+.. thumbnail:: /_images/autorun/easy7.png
     :width: 500
     :height: 300
 
 - There is an emergency stop button on the back of the robot
-- When the button is pressed, the led flashes in red, and the robot can be moved easily by pushing it.
-- E-stop mode can be disengaged by turning the button
+- When the button is pressed, the led flashes in red.
+- In order to push the robot with force, the power of the robot must be turned off. 
+- E-Stop mode is released by pressing the button once more.
 
 --------------------------------------------------------------------------------------
 
