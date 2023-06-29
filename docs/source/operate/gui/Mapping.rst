@@ -51,5 +51,5 @@ Creating maps for automated driving
 
 .. thumbnail:: /_images/start_gui/mapping10.png
 
-- png file showing the appearance of the map and a yaml file with the detailed data of the map are created.
+- pgm file showing the appearance of the map and a yaml file with the detailed data of the map are created.
 
